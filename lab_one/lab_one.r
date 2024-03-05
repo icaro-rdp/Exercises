@@ -48,3 +48,7 @@ average_sum_success_m_age_over_30 <- mean(apply(sport_watch_df[sport_watch_df$Ge
 # Exercise 1.8 Compute for each individual the sum of the two easy of use items.
 
 individual_eo_sum <- apply(sport_watch_df[, ease_of_use_columns], 1, sum)
+
+
+# Exercise 1.9 Verify (in a purely descriptive way – no statistical inference is required) if the average value of
+# time on task for task 1 at time 1 is larger for unsuccessful results as compared to successful ones.
