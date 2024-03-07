@@ -49,6 +49,21 @@ average_sum_success_m_age_over_30 <- mean(apply(sport_watch_df[sport_watch_df$Ge
 
 individual_eo_sum <- apply(sport_watch_df[, ease_of_use_columns], 1, sum)
 
+# Exercise 1.9 Verify (in a purely descriptive way – no statistical inference is required) if the average value of number of time on task for task 1 at time 1 is larger for unsuccessful results as compared to successful ones.
 
-# Exercise 1.9 Verify (in a purely descriptive way – no statistical inference is required) if the average value of
-# time on task for task 1 at time 1 is larger for unsuccessful results as compared to successful ones.
+tt1t1_unsuccessful <- sport_watch_df[sport_watch_df$SuccT1t1 == 0, "TT1t1"]
+tt1t1_successful <- sport_watch_df[sport_watch_df$SuccT1t1 == 1, "TT1t1"]
+
+is_unsuccessful_larger <- mean(tt1t1_successful) < mean(tt1t1_unsuccessful)
+
+
+# Exercise 1.10 Compute the average value of task time for task 3 at time 2 (tt3t2) for the subgroup of individuals who EITHER would recommend the sport watch to a friend (Sat2) OR are very satisfied with it (Sat1 greater than 3) but not both.
+
+# This is the group that would recommend the watch to a friend but are not satisfied with it
+tt3t2_recommend <- sport_watch_df[sport_watch_df$Sat1 == 1 & sport_watch_df$Sat2 <= 2, "TT3t2"]
+
+# This is the group that is satisfied with the watch but would not recommend it to a friend
+tt3t2_satisfied <- sport_watch_df[sport_watch_df$Sat1 == 0 & sport_watch_df$Sat2 > 3, "TT3t2"]
+
+## Once we have the two groups we can calculate the average of the two)
+avg_recommend <- mean(c(tt3t2_recommend, tt3t2_satisfied))
