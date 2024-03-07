@@ -1,10 +1,13 @@
 setwd("/Users/icaroredepaolini/Library/CloudStorage/GoogleDrive-icaro.redepaolini@studenti.unitn.it/Il mio Drive/First year/Secondo semestre/Quantitative/Exercises/lab_one/")
 
+# Exercise 1.1 Load the data file DATASW.csv in the R package and assign it to a data frame called DATA.
+
 # CSV has ; as separator and , as decimal separator so we need to use read.csv2
+
 sport_watch_df <- read.csv2("sport_watch_df.csv")
 
-# Summary of the data in the time_on_task columns
 
+# Columns names used for the exercises
 time_on_task_columns <- c("TT1t1", "TT2t1", "TT3t1", "TT1t2", "TT2t2", "TT3t2")
 satisfaction_columns <- c("Sat1", "Sat2")
 ease_of_use_columns <- c("EU1", "EU2")
