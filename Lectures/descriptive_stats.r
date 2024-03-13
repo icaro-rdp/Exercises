@@ -66,6 +66,8 @@ contingency_table <- table(df_A_B) # Output is a 2x2 table with the counts of th
 #   a 3 2
 #   b 3 2
 
-# If we want to calculate the marginal totals we can use the margin.table function
+# If we want the marginal frequencies
+table(df_A_B) / sum(table(df_A_B))
 
-margin_table <- margin.table(contingency_table)
+# Or we can use the prop.table function
+prop.table(table(df_A_B)) # This gives the same result as the previous line of code and provides the proportions of the counts
