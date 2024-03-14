@@ -1,5 +1,3 @@
-setwd("/Users/icaroredepaolini/Library/CloudStorage/GoogleDrive-icaro.redepaolini@studenti.unitn.it/Il mio Drive/First year/Secondo semestre/Quantitative/Exercises/lab_one/")
-
 # Exercise 1.1 Load the data file DATASW.csv in the R package and assign it to a data frame called DATA.
 
 # CSV has ; as separator and , as decimal separator so we need to use read.csv2
