@@ -16,10 +16,15 @@ print(cov(X3, X4)) # 550.1818 says that X3 and X4 are positively correlated and 
 
 # If we calculated the cov to the variable itself we get the variance because the covariance of a variable with itself is the variance of that variable.
 
-# Correlation
-# Correlation is the ratio of the covariance to the product of the standard deviations of the variables.
+# Correlation -> the ratio of the covariance to the product of the standard deviations of the variables. The difference between covariance and correlation is that correlation is a standardized measure, i.e. it is dimensionless and ranges from -1 to 1.
+
 
 correlation_x1_x2 <- cor(X1, X2)
 print(correlation_x1_x2) # 0.8164205 says that X1 and X2 are positively correlated and so if X1 increases, X2 also increases
 
-# The difference between covariance and correlation is that correlation is a standardized measure, i.e. it is dimensionless and ranges from -1 to 1.
+# Moreover the correlation do not change if we change the scale of the variables
+correlation_x3_x4 <- cor(X3, X4)
+print(correlation_x3_x4) # 0.8164205 says that X3 and X4 are positively correlated and so if X3 increases, X4 also increases
+
+
+# One more tip : the sign of the cov "creates" the sign of the correlation and the denominator "rescale" the correlation to be between -1 and 1.
