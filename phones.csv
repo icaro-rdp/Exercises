@@ -1,11 +1,11 @@
-Name,Length,Width,Weight,Build,Display type,Press.-sens. displ.,RAM,Attractiveness
-Pixel XL,155,76,168,Alumin,Amoled,No,4GB,Appreciable
-Pixel,144,70,143,Alumin,Amoled,No,4GB,Modest
-7 Plus,158,78,188,Alumin,IPS,Yes,4GB,High
-iPhone 7,138,67,138,Alumin,IPS,Yes,2GB,High
-LG V20,160,78,174,Alumin,IPS,No,4GB,Modest
-S7 edge,151,73,157,Alumin-Gl,Amoled,No,4GB,High
-GS7,142,70,152,Alumin-Gl,Amoled,No,4GB,High
-HTC 10,146,72,161,Alumin,IPS,No,4GB,Appreciable
-OnePlus,153,75,158,Alumin,Amoled,No,6GB,Poor
-Moto Z.,153,75,136,Alumin-St,Amoled,No,4GB,Sufficient
+Name,Length,Width,Weight,Build,DisplayType,PressSesnsDisp,RAM,Attractiveness
+Pixel XL,155,76,168,Alumin,Amoled,No,4,Appreciable
+Pixel,144,70,143,Alumin,Amoled,No,4,Modest
+7 Plus,158,78,188,Alumin,IPS,Yes,4,High
+iPhone 7,138,67,138,Alumin,IPS,Yes,2,High
+LG V20,160,78,174,Alumin,IPS,No,4,Modest
+S7 edge,151,73,157,Alumin-Gl,Amoled,No,4,High
+GS7,142,70,152,Alumin-Gl,Amoled,No,4,High
+HTC 10,146,72,161,Alumin,IPS,No,4,Appreciable
+OnePlus,153,75,158,Alumin,Amoled,No,6,Poor
+Moto Z.,153,75,136,Alumin-St,Amoled,No,4,Sufficient

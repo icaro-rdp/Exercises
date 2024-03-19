@@ -16,7 +16,7 @@ print(cov(X3, X4)) # 550.1818 says that X3 and X4 are positively correlated and 
 
 # If we calculated the cov to the variable itself we get the variance because the covariance of a variable with itself is the variance of that variable.
 
-# Correlation -> the ratio of the covariance to the product of the standard deviations of the variables. The difference between covariance and correlation is that correlation is a standardized measure, i.e. it is dimensionless and ranges from -1 to 1.
+# Pearson linear CORRELATION -> the ratio of the covariance to the product of the standard deviations of the variables. The difference between covariance and correlation is that correlation is a standardized measure, i.e. it is dimensionless and ranges from -1 to 1.
 
 
 correlation_x1_x2 <- cor(X1, X2)
@@ -28,3 +28,5 @@ print(correlation_x3_x4) # 0.8164205 says that X3 and X4 are positively correlat
 
 
 # One more tip : the sign of the cov "creates" the sign of the correlation and the denominator "rescale" the correlation to be between -1 and 1.
+
+# What happens if we apply a correlation to data that are not linearly related? if we try to apply a linear model to some data that are not linearly related, the correlation will be close to 0. But it makes no sense to apply a linear model to data that are not linearly related. Due to this problem, the correlation is not a good measure of the relationship between two variables if the relationship is not linear and we have to use other measures. (slide 42)
