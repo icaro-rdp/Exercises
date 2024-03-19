@@ -61,6 +61,7 @@ cat("\n")
 
 aluminum_based <- phones_df[phones_df$Build == "Alumin", c("Length", "Width", "Weight")]
 
+# Apply function to each column of the dataframe, rember that 2 specifies the margin (column) and 1 specifies the margin (row)
 range_aluminum_based <- apply(aluminum_based, 2, range)
 
 print("Exercise 1.7 : ranges")
