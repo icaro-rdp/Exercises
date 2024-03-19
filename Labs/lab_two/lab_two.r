@@ -6,7 +6,7 @@ phones_df <- read.csv("phones.csv")
 
 builds <- factor(phones_df$Build)
 displays <- factor(phones_df$DisplayType)
-press_displays <- factor(phones_df$PressDisplay)
+press_displays <- factor(phones_df$PressSesnsDisp)
 
 # Exercise 1.3 Assign to the variables RAM and Attractiveness an ordinal representation using the appropriate R function.
 
