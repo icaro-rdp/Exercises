@@ -24,3 +24,19 @@ abline(v = x_mean, col = "#97ecbc")
 hist(x, col = "lightgreen", main = "Histogram of X", xlab = "X", ylab = "Frequency")
 abline(v = x_mean, col = "red", lty = 2, lwd = 2)
 abline(v = median(x), col = "black", lty = 2, lwd = 2)
+
+# Boxplot
+
+boxplot(x, y, col = c("lightblue", "lightgreen"), main = "Boxplot of X and Y", xlab = "X and Y", ylab = "Values")
+
+# Is just the graphical representation of the summary of the data
+summary(x)
+summary(y)
+
+# Kernel density plot
+# Likewise the histogram, but with a smooth line instead of bars, the goal is the same, understand the distribution of the data
+
+plot(density(x), col = "blue", main = "Kernel density plot of X", xlab = "X", ylab = "Density")
+lines(density(y), col = "red")
+# Add also the second density plot (line)
+legend("topright", legend = c("X", "Y"), col = c("blue", "red"), lty = 1, cex = 0.8)
