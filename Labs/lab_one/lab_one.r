@@ -1,4 +1,6 @@
-# Exercise 1.1 Load the data file DATASW.csv in the R package and assign it to a data frame called DATA.
+# Load the data file DATASW.csv in the R package and assign it to a data frame called DATA.
+DATA <- read.csv("DATASW.csv")
+
 
 # CSV has ; as separator and , as decimal separator so we need to use read.csv2
 
@@ -68,3 +70,6 @@ tt3t2_satisfied <- sport_watch_df[sport_watch_df$Sat1 == 0 & sport_watch_df$Sat2
 
 ## Once we have the two groups we can calculate the average of the two)
 avg_recommend <- mean(c(tt3t2_recommend, tt3t2_satisfied))
+
+# delete all the variables created
+rm(list = ls())

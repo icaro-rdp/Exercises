@@ -1,5 +1,5 @@
+# import the dataset
 phones_df <- read.csv("phones.csv")
-
 
 # Exercise 1.2
 # Assign to the variables Build, Display, and PressDispl a factorial (categorical) representation by using the appropriate R function.
@@ -67,3 +67,6 @@ range_aluminum_based <- apply(aluminum_based, 2, range)
 print("Exercise 1.7 : ranges")
 print(range_aluminum_based)
 cat("\n")
+
+# delete all the variables created
+rm(list = ls())
