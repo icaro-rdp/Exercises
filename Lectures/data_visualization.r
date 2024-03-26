@@ -33,10 +33,26 @@ boxplot(x, y, col = c("lightblue", "lightgreen"), main = "Boxplot of X and Y", x
 summary(x)
 summary(y)
 
+# Remember that the hist plot the relative frequencies, where relative stand for the proportion of the total data that is in each bin.
+
+
 # Kernel density plot
-# Likewise the histogram, but with a smooth line instead of bars, the goal is the same, understand the distribution of the data
+# Likewise the histogram, but with a smooth line instead of bars, the goal is the same, understand the distribution of the data.
 
 plot(density(x), col = "blue", main = "Kernel density plot of X", xlab = "X", ylab = "Density")
 lines(density(y), col = "red")
 # Add also the second density plot (line)
 legend("topright", legend = c("X", "Y"), col = c("blue", "red"), lty = 1, cex = 0.8)
+
+# the density plot has the bandwidth parameter that can be adjusted to change the smoothness of the line (default is 0.9)
+
+plot(density(x, bw = 0.1), col = "blue", main = "Kernel density plot of X", xlab = "X", ylab = "Density with bw = 0.1")
+
+plot(density(x, bw = 1), col = "blue", main = "Kernel density plot of X", xlab = "X", ylab = "Density with bw = 0.1")
+
+# But what does it mean 1? Look at the formula on the slides.
+
+# I want to have an histogram and a density plot in the same plot
+
+hist(x, col = "lightgreen", main = "Histogram and density plot of X", xlab = "X", ylab = "Frequency", prob = TRUE)
+lines(density(x), col = "blue")
