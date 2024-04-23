@@ -45,6 +45,7 @@ cor(fitts_law_eq, distance)
 x_vals <- seq(10, 600, 0.5)
 sizes <- sort(unique(size))
 
+
 # Function to calculate the y-axis ranges for the plots in order to have consistent y-axis ranges across all plots
 y_axes_ranges <- function(x_vals, sizes) {
     y_min <- 0
@@ -58,6 +59,8 @@ y_axes_ranges <- function(x_vals, sizes) {
     }
     return(c(y_min, y_max))
 }
+print(y_axes_ranges(x_vals, sizes))
+
 
 par(mfrow = c(2, 2))
 # Plot in a 2x2 grid all the sizes and their relationship with the fitts_law_eq and distance
