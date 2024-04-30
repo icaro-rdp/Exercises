@@ -53,7 +53,12 @@ print(D23_M_F_t)
 
 # Exercise 1.6 Evaluate if the population mean of D15 for students belonging to the first two academic years  is significantly smaller than the population mean of D15 for students belonging to the last three academic  years (without homogeneity of variance assumption).
 
+D15_1_2 <- big_five_df$D15[big_five_df$AA <= 2]
+D15_3_5 <- big_five_df$D15[big_five_df$AA > 2]
 
+D15_AA_t <- t.test(D15_1_2, D15_3_5, var.equal = FALSE)
+
+print(D15_AA_t)
 
 # Exercise 1.7 Evaluate if Age is significantly different from 23.
 
