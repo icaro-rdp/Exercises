@@ -60,3 +60,14 @@ print(p_value_beta)
 
 
 # Exercise 3.6 Run a new regression analysis this time on the standardized values of the two variables TTS and STS. Comment the results (including the inferential decisions) of the new analysis and provide a new graphical representation showing the relation between the two variables and the corresponding linear regression model. Verify that the sample correlation between TTS and STS corresponds to the new estimated slope in the linear regression. Finally, re-compute the p-values under the null hypotheses defined in Ex. 3.5. Comments the new inferential results.
+
+std_tts <- scale(typing_speed_df$touch_typing_speed)
+std_sts <- scale(typing_speed_df$stylus_typing_speed)
+
+std_reg_model <- lm(std_sts ~ std_tts)
+std_lm_summary <- summary(std_reg_model)
+
+print(std_lm_summary)
+
+plot(std_tts, std_sts, xlab = "Standardized Touch Typing Speed", ylab = "Standardized Stylus Typing Speed", col = "blue", pch = 19)
+abline(std_reg_model, col = "red")
