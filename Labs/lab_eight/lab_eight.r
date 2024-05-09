@@ -21,6 +21,20 @@ print(aov_TES_TET)
 
 boxplot(TES ~ as.factor(TET), data = tex_tech_df, xlab = "TET", ylab = "TES", main = "TES vs TET")
 
+# Further analysis
+t_test_DB_SB <- t.test(tex_tech_df$TES[tex_tech_df$TET == "DB"], tex_tech_df$TES[tex_tech_df$TET == "SB"])
+t_test_DB_ZB <- t.test(tex_tech_df$TES[tex_tech_df$TET == "DB"], tex_tech_df$TES[tex_tech_df$TET == "ZB"])
+t_test_SB_ZB <- t.test(tex_tech_df$TES[tex_tech_df$TET == "SB"], tex_tech_df$TES[tex_tech_df$TET == "ZB"])
+
+# p-value correction for repeated tests (Bonferroni)
+number_of_tests <- 3
+new_p <- 0.05 / number_of_tests
+print(t_test_DB_SB$p.value < new_p)
+print(t_test_DB_ZB$p.value < new_p)
+print(t_test_SB_ZB$p.value < new_p)
+
+# First and third are significant
+
 # Exercise 1.4 Rerun the analysis, this time by considering also AGE as a second factor in the analysis. Provide the new graphical representations and comment the statistical inference results. In case of statistically significant results (note that here you have 3 distinct inferential tests: main effect of TET, main effect of AGE, and interaction effect TET by AGE), run additional post-hoc analyses on the corresponding significant effects (note: you have to control for the Type I error probability separately for each eventual significant effect).
 
 aov_TES_TETxAGE <- Anova(lm(TES ~ as.factor(TET) * as.factor(AGE), data = tex_tech_df))
