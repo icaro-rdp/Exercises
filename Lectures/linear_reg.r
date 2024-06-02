@@ -28,3 +28,5 @@ abline(0, 0, col = "red")
 # We can have different scenarios, in one case we can have a significant slope and a non-significant intercept, in another case we can have a significant intercept and a non-significant slope, in another case we can have both significant, in another case we can have both non-significant.
 
 # The R-squared index is very relevant because tells us and overall info about how good is our model in predicting the dependent variable, in this case the R-squared is 0.77, which means that 77% of the variance in the dependent variable is explained by the independent variable. The closer the R-squared is to 1 the better is the model. The closer the R-squared is to 0 the worse is the model.
+
+# The degrees of freedom are the number of observations minus the number of parameters estimated by the model, in this case 12 - 2 = 10.

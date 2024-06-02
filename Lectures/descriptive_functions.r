@@ -71,3 +71,6 @@ table(df_A_B) / sum(table(df_A_B))
 
 # Or we can use the prop.table function
 prop.table(table(df_A_B)) # This gives the same result as the previous line of code and provides the proportions of the counts
+print(margin.table(contingency_table, 1)) # Marginal sum row-wise
+print(margin.table(contingency_table, 2)) # Marginal sum column-wise
+print(table(A, B)) # This is the same as the previous line of code
