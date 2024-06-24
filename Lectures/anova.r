@@ -39,3 +39,5 @@ Anova(M)
 # Here we have not only one slope but two, one for each level of the factor. The intercept is A1 (the baseline for out categorical variable).
 
 # Even if we are using a linear model, the categorical variables are as boolean (dummy variables -> https://en.wikipedia.org/wiki/Dummy_variable_(statistics)), so we have a slope for each level of the factor.
+
+# o	The target distribution for each of the ANOVA test is the F distribution or Fisher distribution, the parameters of the F distribution are the degrees of freedom of the numerator (dFN) and degrees of freedom of the denominator (dFD). In A ANOVA test th dFN is the number of levels of the factor minus 1 and the dFD is the number of observations minus the number of levels of the factor. For instance If we have 100 observations with one factor and the factor has 3 levels.

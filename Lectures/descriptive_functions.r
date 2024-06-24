@@ -55,7 +55,7 @@ values <- rnorm(15)
 # We can use the table function also on two or more factors to create a contingency table
 
 # Note that th observations of A and B needs to be the same in number
-A <- c("a", "b", "a", "b", "a", "b", "a", "b", "a", "b")
+A <- c("b", "b", "a", "a", "a", "b", "a", "b", "a", "b")
 B <- c("x", "x", "y", "y", "x", "x", "y", "y", "x", "x")
 
 df_A_B <- data.frame(A, B)
@@ -74,3 +74,7 @@ prop.table(table(df_A_B)) # This gives the same result as the previous line of c
 print(margin.table(contingency_table, 1)) # Marginal sum row-wise
 print(margin.table(contingency_table, 2)) # Marginal sum column-wise
 print(table(A, B)) # This is the same as the previous line of code
+
+print("----------------------------------")
+print(mean(margin.table(contingency_table, 2)))
+print(apply(contingency_table, 2, mean)) # This is the same as the previous line of code
